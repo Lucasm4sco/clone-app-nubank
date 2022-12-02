@@ -42,6 +42,9 @@ function Tabs() {
                   />
         },
         tabBarShowLabel: false,
+        tabBarStyle: {
+          height: 60,
+        },
         tabBarActiveTintColor: '#9c3dd9',
         tabBarInactiveTintColor: '#93949d',
         tabBarIcon: ({ focused, color, size }) => <TabBarIcons 
@@ -72,4 +75,3 @@ function Tabs() {
     </Tab.Navigator>
   );
 }
-
