@@ -1,9 +1,8 @@
-import { View } from "react-native";
 import { FontAwesome, Feather, Fontisto, Octicons } from '@expo/vector-icons'; 
 
 const Footbal = ({color, size}) => <FontAwesome name="soccer-ball-o" size={size} color={color} />
 
-export default ({route, color, focused, size}) => {
+export default ({route, color, size}) => {
     switch(route){
         case 'Home':
             return <Octicons name="arrow-switch" size={size} color={color} style={{

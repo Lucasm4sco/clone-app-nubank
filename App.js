@@ -2,6 +2,7 @@ import { useState } from "react";
 import { NavigationContainer, useNavigation } from "@react-navigation/native";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { createStackNavigator } from "@react-navigation/stack";
+import user from './data/user';
 import 'react-native-gesture-handler';
 
 import Header from "./src/components/Header";
@@ -20,7 +21,7 @@ export default function App() {
         }}
       >
         <Stack.Screen name="initial" component={Tabs} />
-        <Stack.Screen name="Settings" component={HomeScreen} />
+        <Stack.Screen name="Settings" component={HomeScreen} initialParams={user} />
       </Stack.Navigator>
     </NavigationContainer>
   );
@@ -59,10 +60,12 @@ function Tabs() {
       <Tab.Screen 
         name="Home" 
         component={HomeScreen}
+        initialParams={user}
       />
       <Tab.Screen 
         name="MoreOptions" 
         component={HomeScreen} 
+        initialParams={user}
       />
       <Tab.Screen 
         name="Store" 
