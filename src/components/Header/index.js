@@ -1,12 +1,12 @@
 import {  View, TouchableHighlight } from "react-native";
 import { MaterialIcons, Ionicons } from '@expo/vector-icons';
+import { useContext } from "react";
+import { ValueContext } from "../../hooks/HookUseContext";
 import styles from "./style";
 
-const Header = ({navigation, showValues, setShowValues}) => {
+const Header = ({navigation}) => {
     
-    const handleState = () => {
-        setShowValues(!showValues)
-    }
+    const { showValues, handleState } = useContext(ValueContext);
 
     return(
     <View style={styles.containerHeader}>

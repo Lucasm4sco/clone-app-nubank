@@ -2,46 +2,50 @@ import { useState } from "react";
 import { NavigationContainer, useNavigation } from "@react-navigation/native";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { createStackNavigator } from "@react-navigation/stack";
-import user from './data/user';
+import { HookUseContext } from "./src/hooks/HookUseContext";
 import 'react-native-gesture-handler';
 
 import Header from "./src/components/Header";
 import HomeScreen from "./src/screens/Home";
 import TabBarIcons from "./src/components/TabBarIcons";
+import user from './data/user';
 
 const Tab = createBottomTabNavigator();
 const Stack = createStackNavigator();
 
-export default function App() {
+export default () => {
   return (
-    <NavigationContainer>
-      <Stack.Navigator
-        screenOptions={{
-          headerShown: false
-        }}
-      >
-        <Stack.Screen name="initial" component={Tabs} />
-        <Stack.Screen name="Settings" component={HomeScreen} initialParams={user} />
-      </Stack.Navigator>
-    </NavigationContainer>
+    <HookUseContext>
+      <App />
+    </HookUseContext>
+  )
+}
+
+function App() {
+  return (
+    <HookUseContext>
+      <NavigationContainer>
+        <Stack.Navigator
+          screenOptions={{
+            headerShown: false
+          }}
+        >
+          <Stack.Screen name="initial" component={Tabs} />
+          <Stack.Screen name="Settings" component={HomeScreen} initialParams={user} />
+        </Stack.Navigator>
+      </NavigationContainer>
+    </HookUseContext>
   );
 }
 
 function Tabs() {
 
   const navigation = useNavigation();
-  const [ showValues, setShowValues ] = useState(true);
 
   return (
     <Tab.Navigator 
       screenOptions={({ route }) => ({
-        header: () => {
-          return <Header 
-                    navigation={navigation} 
-                    showValues={showValues}
-                    setShowValues={setShowValues} 
-                  />
-        },
+        header: () => <Header navigation={navigation} />,
         tabBarShowLabel: false,
         tabBarStyle: {
           height: 60,
@@ -60,12 +64,12 @@ function Tabs() {
       <Tab.Screen 
         name="Home" 
         component={HomeScreen}
-        initialParams={user}
+        initialParams={{user}}
       />
       <Tab.Screen 
         name="MoreOptions" 
         component={HomeScreen} 
-        initialParams={user}
+        initialParams={{user}}
       />
       <Tab.Screen 
         name="Store" 
