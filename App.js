@@ -1,8 +1,9 @@
-import { useState } from "react";
 import { NavigationContainer, useNavigation } from "@react-navigation/native";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { createStackNavigator } from "@react-navigation/stack";
 import { HookUseContext } from "./src/hooks/HookUseContext";
+import useLoadFonts from "./src/hooks/useLoadFonts";
+import * as SplashScreen from 'expo-splash-screen';
 import 'react-native-gesture-handler';
 
 import Header from "./src/components/Header";
@@ -13,6 +14,8 @@ import user from './data/user';
 const Tab = createBottomTabNavigator();
 const Stack = createStackNavigator();
 
+SplashScreen.preventAutoHideAsync();
+
 export default () => {
   return (
     <HookUseContext>
@@ -22,9 +25,15 @@ export default () => {
 }
 
 function App() {
+
+  const { fontsLoaded, onLayoutRootView } = useLoadFonts();
+
+  if (!fontsLoaded)
+    return null;
+
   return (
     <HookUseContext>
-      <NavigationContainer>
+      <NavigationContainer onReady={onLayoutRootView}>
         <Stack.Navigator
           screenOptions={{
             headerShown: false

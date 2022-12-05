@@ -31,7 +31,8 @@ const styles = StyleSheet.create({
     moneyValue: {
         paddingTop: 18,
         fontSize: 18,
-        fontWeight: '600'
+        fontWeight: '600',
+        fontFamily: 'Poppins_600SemiBold'
     }
 });
 

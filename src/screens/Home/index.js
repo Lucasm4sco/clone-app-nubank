@@ -9,22 +9,21 @@ const HomeScreen = ({route}) => {
     const { user } = route.params;
     const { showValues } = useContext(ValueContext);
 
-    console.log('render')
     return(
-        <ScrollView style={styles.container}>
+        <ScrollView style={styles.container} >
             <View style={styles.viewName}>
                 <Text style={styles.textName}>Olá, {user.name.firstName}</Text>
             </View>
             <TouchableHighlight
                 style={styles.moneyContainer}
-                underlayColor={'gainsboro'}
+                underlayColor='gainsboro'
                 onPress={() => {}}
             >
                 <>
                     <View style={styles.moneyView}>
                         <Text style={styles.infoMoney}>Conta</Text>
                         <Text style={styles.moneyValue}>
-                            { showValues ? 'sim' : 'não' }
+                            { showValues ? `R$ ${user.finances.currentMoney}` : '●●●●' }
                         </Text>
                     </View>
                     <Entypo name="chevron-small-right" size={24} color="#76797f" />

@@ -6,9 +6,9 @@ export default {
         lastName: faker.name.lastName()
     },
     finances: {
-        currentMoney: faker.finance.amount(null, 3000, 2, 'R$ '),
-        moneyInvested: faker.finance.amount(null, 1200, 2, 'R$ '),
-        cryptoMoney: faker.finance.amount(null, 200, 2, 'R$ '),
+        currentMoney: faker.finance.amount(null, 3000, 2),
+        moneyInvested: faker.finance.amount(null, 1200, 2),
+        cryptoMoney: faker.finance.amount(null, 200, 2),
         account: {
             numberAgency: faker.finance.amount(1000, 9999, 0),
             numberBank: faker.finance.amount(1000, 9999, 0),
