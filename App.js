@@ -6,7 +6,6 @@ import useLoadFonts from "./src/hooks/useLoadFonts";
 import * as SplashScreen from 'expo-splash-screen';
 import 'react-native-gesture-handler';
 
-import Header from "./src/components/Header";
 import HomeScreen from "./src/screens/Home";
 import TabBarIcons from "./src/components/TabBarIcons";
 import user from './data/user';
@@ -49,12 +48,10 @@ function App() {
 
 function Tabs() {
 
-  const navigation = useNavigation();
-
   return (
     <Tab.Navigator 
       screenOptions={({ route }) => ({
-        header: () => <Header navigation={navigation} />,
+        headerShown: false,
         tabBarShowLabel: false,
         tabBarStyle: {
           height: 60,
