@@ -7,6 +7,7 @@ import * as SplashScreen from 'expo-splash-screen';
 import 'react-native-gesture-handler';
 
 import HomeScreen from "./src/screens/Home";
+import InvestmentOptionsScreen from "./src/screens/InvestmentOptionsScreen";
 import TabBarIcons from "./src/components/TabBarIcons";
 import user from './data/user';
 
@@ -73,17 +74,19 @@ function Tabs() {
         initialParams={{user}}
       />
       <Tab.Screen 
-        name="MoreOptions" 
-        component={HomeScreen} 
+        name="InvestmentOptions" 
+        component={InvestmentOptionsScreen} 
         initialParams={{user}}
       />
       <Tab.Screen 
         name="Store" 
         component={HomeScreen} 
+        initialParams={{user}}
       />
       <Tab.Screen 
         name="Footbal" 
         component={HomeScreen} 
+        initialParams={{user}}
       />
     </Tab.Navigator>
   );

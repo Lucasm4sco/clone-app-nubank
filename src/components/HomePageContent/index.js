@@ -180,7 +180,7 @@ const HomePageContent = ({user}) => {
                             </>
                         </TouchableHighlight>
                     ))}
-                </ScrollView>
+            </ScrollView>
         </>
     )
 }

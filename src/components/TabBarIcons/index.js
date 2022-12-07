@@ -8,7 +8,7 @@ export default ({route, color, size}) => {
             return <Octicons name="arrow-switch" size={size} color={color} style={{
                 transform: [{ rotate:'90deg' }]
             }}/>
-        case 'MoreOptions':
+        case 'InvestmentOptions':
             return <Fontisto name="dollar" size={size} color={color}/>
         case 'Store':
             return <Feather name="shopping-bag" size={size} color={color} />
