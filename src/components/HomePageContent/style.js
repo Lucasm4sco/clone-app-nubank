@@ -142,7 +142,7 @@ const styles = StyleSheet.create({
         paddingBottom: 25
     },
     viewBox: {
-        width: 230,
+        width: 240,
         borderRadius: 10,
         marginRight: 15,
         backgroundColor: '#f0f1f5',
@@ -156,11 +156,13 @@ const styles = StyleSheet.create({
     },
     boxTitle: {
         margin: 15,
-        fontWeight: '600'
+        fontWeight: '700',
+        fontSize: 15
     },
     boxText: {
         marginHorizontal: 15,
-        color: '#7a7b80'
+        color: '#7a7b80',
+        height: 35,
     },
     boxButton: {
         margin: 15,
@@ -172,7 +174,7 @@ const styles = StyleSheet.create({
     boxTextButton: {
         color: '#fff',
         fontWeight: '600',
-        fontSize: 16
+        fontSize: 16,
     }
 });
 

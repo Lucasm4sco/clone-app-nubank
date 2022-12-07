@@ -157,14 +157,23 @@ const HomePageContent = ({user}) => {
                     contentContainerStyle={styles.listCards}
                 >
                     {listCards.map((card, i) => (
-                        <TouchableHighlight key={i} style={styles.viewBox}>
+                        <TouchableHighlight 
+                            key={i} 
+                            style={styles.viewBox}
+                            onPress={() => {}} 
+                            underlayColor='#a8a8aa'
+                        >
                             <>
                                 <Image 
                                     source={card.image} 
                                     style={styles.boxImage}
                                 />
                                 <Text style={styles.boxTitle}>{card.titleCard}</Text>
-                                <Text style={styles.boxText}>{card.textCard}</Text>
+                                <Text 
+                                    style={styles.boxText}
+                                >
+                                    {card.textCard}
+                                </Text>
                                 <View style={styles.boxButton}>
                                     <Text style={styles.boxTextButton}>{card.textButtonCard}</Text>
                                 </View>
