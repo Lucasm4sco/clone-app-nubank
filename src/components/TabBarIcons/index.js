@@ -1,7 +1,5 @@
 import { FontAwesome, Feather, Fontisto, Octicons } from '@expo/vector-icons'; 
 
-const Footbal = ({color, size}) => <FontAwesome name="soccer-ball-o" size={size} color={color} />
-
 export default ({route, color, size}) => {
     switch(route){
         case 'Home':
@@ -13,6 +11,6 @@ export default ({route, color, size}) => {
         case 'Store':
             return <Feather name="shopping-bag" size={size} color={color} />
         case 'Footbal':
-            return <Footbal color={color} size={size} />
+            return <FontAwesome name="soccer-ball-o" size={size} color={color} />
     }
 }

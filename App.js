@@ -8,6 +8,7 @@ import 'react-native-gesture-handler';
 
 import HomeScreen from "./src/screens/Home";
 import InvestmentOptionsScreen from "./src/screens/InvestmentOptionsScreen";
+import AccountInfoScrenn from "./src/screens/AccountInfoScreen";
 import TabBarIcons from "./src/components/TabBarIcons";
 import user from './data/user';
 
@@ -39,8 +40,8 @@ function App() {
             headerShown: false
           }}
         >
-          <Stack.Screen name="initial" component={Tabs} />
-          <Stack.Screen name="Settings" component={HomeScreen} initialParams={user} />
+          <Stack.Screen name="Initial" component={Tabs} />
+          <Stack.Screen name="AccountInformation" component={AccountInfoScrenn} initialParams={{user}} />
         </Stack.Navigator>
       </NavigationContainer>
     </HookUseContext>

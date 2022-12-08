@@ -14,7 +14,7 @@ const Header = ({navigation}) => {
             style={styles.buttonNavigate}
             activeOpacity={1}
             underlayColor="#61079d"
-            onPress={() => navigation.navigate('Settings')}
+            onPress={() => navigation.navigate('AccountInformation')}
         >
             <MaterialIcons name="add-photo-alternate" size={27} color="white" />
         </TouchableHighlight>

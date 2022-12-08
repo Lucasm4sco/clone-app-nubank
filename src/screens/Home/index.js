@@ -8,7 +8,12 @@ const HomeScreen = ({route, navigation}) => {
     const { user } = route.params;
    
     return(
-        <ScrollView showsVerticalScrollIndicator={false} style={{backgroundColor: '#fff'}} >
+        <ScrollView 
+            showsVerticalScrollIndicator={false} 
+            style={{
+                backgroundColor: '#fff'
+            }} 
+        >
             <Header navigation={navigation} />
             <HomePageContent user={user}/>
         </ScrollView>
