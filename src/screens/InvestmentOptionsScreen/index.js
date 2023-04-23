@@ -5,14 +5,14 @@ import { ValueContext } from "../../hooks/HookUseContext";
 import Header from "../../components/Header";
 import styles from "./style";
 
-const InvestmentOptionsScreen = ({route}) => {
+const InvestmentOptionsScreen = ({route, navigation}) => {
 
   const { user } = route.params;
   const { showValues } = useContext(ValueContext);
 
   return (
     <ScrollView contentContainerStyle={styles.container}>
-      <Header />
+      <Header navigation={navigation}/>
       <View style={[
           styles.contentOptions, 
           styles.borderStyle
