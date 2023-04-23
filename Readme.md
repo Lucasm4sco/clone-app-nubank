@@ -10,28 +10,28 @@ As telas que estive desenvolvendo nesse projeto:
 
 - **Página de carregamento do app**
 
-![imagem da tela de carregamento](./assets/carregamento-app.png)
+    ![imagem da tela de carregamento](./assets/carregamento-app.png)
 
 - **Tela inicial - Parte 1**
 
-![primeira imagem da tela inicial do aplicativo](./assets/pagina-inicial-1.png)
+    ![primeira imagem da tela inicial do aplicativo](./assets/pagina-inicial-1.png)
 
 - **Tela inicial - Parte 2**
 
-![segunda imagem da tela inicial do aplicativo](./assets/pagina-inicial-2.png)
+    ![segunda imagem da tela inicial do aplicativo](./assets/pagina-inicial-2.png)
 
 
 - **Tela de investimento**
 
-![tela para investimentos do aplicativo](./assets/pagina-investimentos.png)
+    ![tela para investimentos do aplicativo](./assets/pagina-investimentos.png)
 
 - **Tela de configurações - Parte 1**
 
-![primeira imagem da tela de configurações](./assets/pagina-configuracoes-1.png)
+    ![primeira imagem da tela de configurações](./assets/pagina-configuracoes-1.png)
 
 - **Tela de configurações - Parte 2**
 
-![segunda imagem da tela de configurações](./assets/pagina-configuracoes-2.png)
+    ![segunda imagem da tela de configurações](./assets/pagina-configuracoes-2.png)
 
 ## Como iniciar
 
